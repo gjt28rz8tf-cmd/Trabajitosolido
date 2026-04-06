@@ -1,6 +1,5 @@
 'use client'
 import { useState, useRef, useCallback } from 'react'
-import styles from './page.module.css'
 
 const formatARS = (n) =>
   new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 }).format(n)
