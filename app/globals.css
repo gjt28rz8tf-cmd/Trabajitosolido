@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@400;700;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #07090f;
+  --bg2: #0c1018;
+  --bg3: #111620;
+  --border: #1a2535;
+  --blue: #3a8fff;
+  --blue-dim: #1a4a8a;
+  --green: #00e87a;
+  --yellow: #ffd600;
+  --red: #ff3a3a;
+  --text: #d0dae8;
+  --text-dim: #4a6a8a;
+  --mono: 'Share Tech Mono', monospace;
+  --sans: 'Barlow Condensed', sans-serif;
+}
+
+html, body { min-height: 100vh; background: var(--bg); color: var(--text); font-family: var(--mono); }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type=number] { -moz-appearance: textfield; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--blue-dim); border-radius: 2px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,232,122,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(0,232,122,0); }
+}
+
+@keyframes pulse-yellow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,214,0,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(255,214,0,0); }
+}
+
+@keyframes scan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.fade-up { animation: fadeUp 0.4s ease forwards; }
